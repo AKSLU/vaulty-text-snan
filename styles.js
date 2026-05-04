@@ -1,31 +1,12 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
 const { width } = Dimensions.get('window');
+
 export const styles = StyleSheet.create({
-  // container
   container: {
     flex: 1,
     padding: 20,
   },
-  fullscreen: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: '#000',
-    zIndex: 200,
-  },
-  loader: {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    marginLeft: -20,
-    marginTop: -20,
-  },
-  emptyText: {
-    textAlign: 'center',
-    marginTop: 30,
-    fontSize: 16,
-  },
-
-  // header h1
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -39,16 +20,6 @@ export const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
   },
-  sectionTitle: {
-    fontSize: 13,
-    fontWeight: 'bold',
-    marginBottom: 10,
-    marginTop: 10,
-    textTransform: 'uppercase',
-    letterSpacing: 1,
-  },
-
-  // btn
   buttonRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -65,8 +36,6 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
   },
-
-  // input
   input: {
     height: 50,
     borderWidth: 1,
@@ -74,25 +43,6 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 15,
     fontSize: 16,
   },
-  inputContainer: {
-    width: '100%',
-    height: 55,
-    borderRadius: 18,
-    borderWidth: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 15,
-    marginBottom: 12,
-  },
-  noteInputInside: {
-    borderRadius: 20,
-    padding: 15,
-    fontSize: 16,
-    textAlignVertical: 'top',
-    borderWidth: 1,
-  },
-
-  // list card
   card: {
     flexDirection: 'row',
     padding: 12,
@@ -107,12 +57,14 @@ export const styles = StyleSheet.create({
     borderRadius: 8,
     marginRight: 12,
   },
-  text: {
-    fontSize: 17,
-    lineHeight: 26,
+  sectionTitle: {
+    fontSize: 13,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    marginTop: 10,
+    textTransform: 'uppercase',
+    letterSpacing: 1,
   },
-
-  // tags
   tagBadge: {
     paddingHorizontal: 14,
     paddingVertical: 8,
@@ -123,6 +75,38 @@ export const styles = StyleSheet.create({
   tagText: {
     fontSize: 13,
     fontWeight: '600',
+  },
+  modalCard: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    padding: 20,
+    zIndex: 100,
+  },
+  modalDate: {
+    fontSize: 12,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  text: {
+    fontSize: 17,
+    lineHeight: 26,
+  },
+  bottomBar: {
+    flexDirection: 'row',
+    paddingTop: 15,
+    marginTop: 10,
+    borderTopWidth: 1,
+  },
+  actionBtn: {
+    width: 50,
+    height: 50,
+    borderRadius: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 10,
   },
   tagInputSection: {
     marginTop: 15,
@@ -139,83 +123,6 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 10,
     fontWeight: 'bold',
   },
-
-  // mondal
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.6)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  modernModal: {
-    width: '85%',
-    padding: 24,
-    borderRadius: 28,
-    alignItems: 'center',
-    elevation: 10,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 5 },
-    shadowOpacity: 0.3,
-    shadowRadius: 10,
-  },
-  modernModalTitle: {
-    fontSize: 20,
-    fontWeight: '700',
-    marginBottom: 8,
-  },
-  compactModal: {
-    width: '85%',
-    maxWidth: 340,
-    borderRadius: 28,
-    padding: 24,
-    alignItems: 'center',
-    elevation: 24,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 12 },
-    shadowOpacity: 0.4,
-    shadowRadius: 16,
-  },
-  iconCircle: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 16,
-  },
-
-  // password
-  pinInputInside: {
-    flex: 1,
-    height: '100%',
-    fontSize: 16,
-    textAlign: 'left',
-  },
-  eyeIcon: {
-    padding: 5,
-    marginLeft: 5,
-  },
-  modalButtons: {
-    flexDirection: 'row',
-    marginTop: 16,
-    gap: 12,
-  },
-  confirmBtn: {
-    flex: 2,
-    height: 52,
-    borderRadius: 14,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  cancelBtn: {
-    flex: 1,
-    height: 52,
-    borderRadius: 14,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
-  // folder
   folderRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -232,21 +139,41 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 10,
   },
-  folderHeaderTitle: {
-    fontSize: 26,
-    fontWeight: 'bold',
-  },
   addFolderBtn: {
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 8,
   },
+  backLink: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 15,
+  },
+  folderHeaderTitle: {
+    fontSize: 26,
+    fontWeight: 'bold',
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  folderPicker: {
+    width: '80%',
+    padding: 20,
+    borderRadius: 20,
+  },
+  modalTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 15,
+  },
   folderOption: {
     paddingVertical: 15,
     borderBottomWidth: 1,
   },
-
-  // burger meni
   burgerOverlay: {
     flex: 1,
     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -270,20 +197,150 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '500',
   },
-
-  // bottom bar
-  bottomBar: {
-    flexDirection: 'row',
-    paddingTop: 15,
-    marginTop: 10,
-    borderTopWidth: 1,
+  fullscreen: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: '#000',
+    zIndex: 200,
   },
-  actionBtn: {
-    width: 50,
+  loader: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    marginLeft: -20,
+    marginTop: -20,
+  },
+  emptyText: {
+    textAlign: 'center',
+    marginTop: 30,
+    fontSize: 16,
+  },
+  compactModal: {
+    width: '85%',
+    maxWidth: 340,
+    borderRadius: 28,
+    padding: 24,
+    alignItems: 'center',
+    elevation: 24,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 12 },
+    shadowOpacity: 0.4,
+    shadowRadius: 16,
+  },
+  modalIconCircle: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  modalSubTitle: {
+    fontSize: 14,
+    marginTop: 4,
+    marginBottom: 20,
+    textAlign: 'center',
+    opacity: 0.6,
+  },
+  pinInput: {
+    width: '100%',
+    height: 55,
+    borderRadius: 18,
+    paddingHorizontal: 20,
+    fontSize: 16,
+    textAlign: 'left',
+    marginBottom: 12,
+    borderWidth: 1,
+  },
+  modalButtons: {
+    flexDirection: 'row',
+    marginTop: 16,
+    gap: 12,
+  },
+  confirmBtn: {
+    flex: 2,
+    height: 52,
+    borderRadius: 14,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  cancelBtn: {
+    flex: 1,
+    height: 52,
+    borderRadius: 14,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  noteInputInside: {
+    borderRadius: 20,
+    padding: 15,
+    fontSize: 16,
+    textAlignVertical: 'top',
+    borderWidth: 1,
+  },
+  inputContainer: {
+    width: '100%',
+    height: 55,
+    borderRadius: 18,
+    borderWidth: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 15,
+    marginBottom: 12,
+  },
+  pinInputInside: {
+    flex: 1,
+    height: '100%',
+    fontSize: 16,
+    textAlign: 'left',
+  },
+  eyeIcon: {
+    padding: 5,
+    marginLeft: 5,
+  },
+  modernModal: {
+    width: '85%',
+    padding: 24,
+    borderRadius: 28,
+    alignItems: 'center',
+    elevation: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+  },
+  iconCircle: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  modernModalTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    marginBottom: 8,
+  },
+  modernInput: {
+    width: '100%',
     height: 50,
+    borderRadius: 12,
+    paddingHorizontal: 16,
+    fontSize: 16,
+    borderWidth: 1,
+    marginBottom: 24,
+  },
+  modernModalButtons: {
+    flexDirection: 'row',
+    width: '100%',
+    justifyContent: 'space-between',
+    gap: 12,
+  },
+  modernBtn: {
+    flex: 1,
+    height: 48,
     borderRadius: 12,
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: 10,
   },
 });
